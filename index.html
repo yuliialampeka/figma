@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HealthSpecialist</title>
+
+  <!-- шрифт -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Стилі -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+   <!-- topbar -->
+<header class="topbar">
+  <div class="topbar-wrap">
+    
+    <!-- ЛОГОТИП ЗЛІВА -->
+    <a href="#start" class="brand" aria-label="HealthSpecialist">
+      <div class="symbol">
+        <i></i><i></i><i></i><i></i>
+      </div>
+      <div class="brand-name">Health<span>Specialist</span></div>
+    </a>
+
+   <!-- МЕНЮ -->
+<ul class="menu">
+  <li><a href="#index.html">HOME</a></li>
+  <li><a href="#intro">ABOUT</a></li>
+  <li><a href="services.html">SERVICES</a></li>
+
+
+  <li class="dropdown-wrap">
+    <a href="#team" aria-haspopup="true" aria-expanded="false">DOCTORS</a>
+    <ul class="dropdown-list">
+      <li><a href="#doc1">Phillis K Vance MD</a></li>
+      <li><a href="#doc2">Stanley K Hudson MD</a></li>
+      <li><a href="#doc3">Kevin D Malone MD</a></li>
+      <li><a href="#doc4">Angela S Martin MD</a></li>
+    </ul>
+  </li>
+
+  <li><a href="#footer">CONTACT</a></li>
+</ul>
+
+
+ <!-- КНОПКИ СПРАВА -->
+<div class="user-actions">
+  <button class="btn login"onclick="location.href='login.html'">LOG IN</button>
+  <button class="btn cta" onclick="location.href='signup.html'">SIGN UP</button>
+</div>
+
+
+</header>
+
+    <!-- about -->
+    <section class="intro" id="start">
+      <div class="intro-text">
+        <h1>Dedicated Health<br>Care Specialists</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed elementum dui a eros egestas in blandit diam condimentum. Praesent ut dignissim leo. Vestibulum viverra aliquet turpis, non vehicula purus condimentum eu.</p>
+        <p>Vivamus laoreet consectetur tempor. Etiam consequat mi in magna blandit, ac maximus ligula. Baculis. Mauris est sapien, maximus a felis at, vehicula dapibus diam. Vivamus interdum risus eu mi accumsan, nec placerat sem pellentesque.</p>
+        <button class="btn light">LEARN MORE</button>
+      </div>
+      <div class="intro-image" aria-hidden="true">
+        <img src="img/amb.png" alt="Ambulance">
+      </div>
+    </section>
+
+   <!-- cards -->
+<section class="cards">
+  <div class="card">
+    <h3>EMERGENCIES</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed elementum dui a eros egestas in blandit diam condimentum. Praesent ut dignissim leo. Vestibulum viverra aliquet turpis, non vehicula purus condimentum eu.</p>
+    <button class="btn main">MORE INFO</button>
+  </div>
+
+  <div class="card schedule center-text">
+    <h3>OPERATING HOURS</h3>
+    <div class="timetable">
+      <div><span>MONDAY – FRIDAY</span> <span>08:00 - 18:00</span></div>
+      <hr>
+      <div><span>SATURDAY</span><span>10:00 - 16:00</span></div>
+      <div><span>SUNDAY</span><span>10:00 - 14:00</span></div>
+    </div>
+    <button class="btn main">MAKE AN APPOINTMENT</button>
+  </div>
+
+  <div class="card">
+    <h3>TEST RESULTS</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed elementum dui a eros egestas in blandit diam condimentum. Praesent ut dignissim leo. Vestibulum viverra aliquet turpis, non vehicula purus condimentum eu.</p>
+    <button class="btn main">CHECK TEST</button>
+  </div>
+</section>
+
+   
+   <!-- doctors -->
+<div class="team-wrapper">
+  <section class="team section" id="team">
+    <h2>Doctors</h2>
+    <div class="team-scroll" tabindex="0">
+        <div class="profile" id="doc1">
+          <div class="profile-bg"></div>
+          <div class="profile-body">
+            <div class="med-avatar">
+              <img src="img/Phillis.png" alt="Phillis K Vance, MD">
+            </div>
+            <div class="profile-info">
+              <h4>Phillis K Vance MD</h4>
+              <span class="tag">Family Medicine</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="profile" id="doc2">
+          <div class="profile-bg"></div>
+          <div class="profile-body">
+            <div class="med-avatar">
+              <img src="img/Stanley.png" alt="Stanley K Hudson, MD">
+            </div>
+            <div class="profile-info">
+              <h4>Stanley K Hudson MD</h4>
+              <span class="tag">Internal Medicine</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="profile" id="doc3">
+          <div class="profile-bg"></div>
+          <div class="profile-body">
+            <div class="med-avatar">
+              <img src="img/Kevin.png" alt="Kevin D Malone, MD">
+            </div>
+            <div class="profile-info">
+              <h4>Kevin D Malone MD</h4>
+              <span class="tag">Cardiology</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="profile" id="doc4">
+          <div class="profile-bg"></div>
+          <div class="profile-body">
+            <div class="med-avatar">
+              <img src="img/Angela.png" alt="Angela S Martin, MD">
+            </div>
+            <div class="profile-info">
+              <h4>Angela S Martin MD</h4>
+              <span class="tag">Physical Therapy</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<footer class="footer" id="footer">
+  <div class="footer-wrap">
+
+    <!-- логотип -->
+    <div class="footer-logo">
+      <a href="#start" class="brand footer-brand" aria-label="Back to top">
+        <div class="symbol">
+          <i></i><i></i><i></i><i></i>
+        </div>
+        <div class="brand-name">Health<span>Specialist</span></div>
+      </a>
+    </div>
+
+    <!-- для футера -->
+    <div class="footer-content">
+
+      <!-- SERVICES -->
+    <div class="footer-block services">
+  <h4>SERVICES</h4>
+  <a href="#offers1">Family Medicine</a>
+  <a href="#offers2">Internal Medicine</a>
+  <a href="#offers3">Cardiology</a>
+  <a href="#offers4">Physical Therapy</a>
+    </div>
+
+      <!-- DOCTORS -->
+      <div class="footer-block small-block">
+        <h4>DOCTORS</h4>
+        <a href="#doc1">Philis K. Vance MD</a>
+        <a href="#doc2">Stanley K. Hudson MD</a>
+        <a href="#doc3">Kevin D. Malone MD</a>
+        <a href="#doc4">Angela S. Martin MD</a>
+      </div>
+
+      <!-- CONTACT -->
+      <div class="footer-block contact">
+        <h4>CONTACT</h4>
+        <a href="tel:(404)123-4567" class="contact-button">
+          <img src="img/phone-icon.png" alt="Phone icon">
+          <span class="contact-number">(404)123-4567</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</footer>
+</div>

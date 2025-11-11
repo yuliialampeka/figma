@@ -1,0 +1,1031 @@
+/* кольори */
+:root {
+  --Grey: #3B4053;
+  --Blue: #4593FF;
+  --LightBlue: #F8FBFF;
+  --White: #FFFFFF;
+  --bg: #FFFFFF;
+
+  --radius: 10px;
+  --radius-lg: 16px;
+  --shadow: 0 10px 30px rgba(59, 64, 83, 0.08);
+  --frame-width: 1360px;
+  --section-spacing: 35px;
+}
+
+.section {
+  margin-bottom: var(--section-spacing);
+}
+
+/*стилі*/
+* {
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: var(--bg);
+  color: var(--Grey);
+  line-height: 1.5;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: var(--frame-width);
+  margin: 40px auto;
+  padding: 0 24px;
+}
+
+/* кнопки */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 16px;
+  font-weight: 700;
+  font-size: 15px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.btn:hover,
+.btn:focus-visible {
+  transform: translateY(-1px);
+}
+.btn.main {
+  background: var(--Blue);
+  color: var(--White);
+}
+.btn.light {
+  background: var(--Blue);
+  color: var(--White);
+}
+.btn.alt {
+  background: var(--White);
+  color: var(--Blue);
+}
+
+/* HEADER */
+.topbar {
+  background: var(--Blue);
+  border-radius: var(--radius);
+  height: 90px;
+  display: flex;
+  align-items: center;
+  box-shadow: var(--shadow);
+}
+
+.topbar-wrap {
+  max-width: var(--frame-width);
+  margin: 0 auto;
+  padding: 0 40px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+.symbol {
+  position: relative;
+  width: 34px;
+  height: 34px;
+}
+.symbol i {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--LightBlue);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+.symbol i:nth-child(1) { top: 0; left: 50%; transform: translateX(-50%); }
+.symbol i:nth-child(2) { top: 50%; left: 0; transform: translateY(-50%); }
+.symbol i:nth-child(3) { top: 50%; right: 0; transform: translateY(-50%); }
+.symbol i:nth-child(4) { bottom: 0; left: 50%; transform: translateX(-50%); }
+
+.brand-name {
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--LightBlue);
+}
+.brand-name span {
+  font-weight: 400;
+  opacity: 0.95;
+}
+
+/* меню */
+.menu {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 10;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu li a {
+  font-size: 13px;
+  font-weight: 500;
+  color: #fff;
+  padding: 8px 12px;
+  text-align: center;
+  display: inline-block;
+}
+
+/* DROPDOWN */
+.dropdown-wrap {
+  position: relative;
+}
+
+
+.dropdown-wrap > a {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--White);
+  padding: 8px 12px;
+  text-decoration: none;
+}
+
+/* Список */
+.dropdown-list {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 100%;
+  transform: translateX(-27%);
+  display: none;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  z-index: 100;
+}
+
+/* Кожен пункт */
+.dropdown-list li a {
+  display: block;
+  background-color: var(--Blue);
+  color: var(--White);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 12px 16px;
+  border-radius: 8px; 
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid transparent;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: background 0.2s ease, color 0.2s ease, border 0.2s ease;
+}
+
+.dropdown-list li a:hover {
+  background-color: var(--White);
+  color: var(--Blue);
+  border-color: var(--Blue);
+}
+
+/* показ при наведенні */
+.dropdown-wrap:hover .dropdown-list {
+  display: flex;
+}
+/* лого */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+}
+.symbol {
+  position: relative;
+  width: 34px;
+  height: 34px;
+}
+.symbol i {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--LightBlue);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+.symbol i:nth-child(1) { top: 0; left: 50%; transform: translateX(-50%); }
+.symbol i:nth-child(2) { top: 50%; left: 0; transform: translateY(-50%); }
+.symbol i:nth-child(3) { top: 50%; right: 0; transform: translateY(-50%); }
+.symbol i:nth-child(4) { bottom: 0; left: 50%; transform: translateX(-50%); }
+
+.brand-name {
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--LightBlue);
+}
+.brand-name span {
+  font-weight: 400;
+  opacity: 0.95;
+}
+
+/* ДРОПДАУН */
+/* меню */
+.menu {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  position: relative;
+  z-index: 100;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu a {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--Blue);
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: 0.2s ease;
+}
+
+/* Дропдаун */
+.dropdown-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  padding: 12px;
+  background-color: transparent;
+  z-index: 99;
+}
+
+.dropdown-wrap:hover .dropdown-list {
+  display: flex;
+}
+
+/* Кнопки в дропдауні */
+.dropdown-list a {
+  background-color: var(--Blue);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+  white-space: nowrap;
+}
+
+.dropdown-list a:hover {
+  background-color: var(--DarkBlue);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* КНОПКИ --------------------------------------------------- */
+.user-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.signin {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--LightBlue);
+}
+
+/* базовий стиль кнопки */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 16px;
+  font-weight: 700;
+  font-size: 15px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+/* ховер для всіх кнопок */
+.btn:hover,
+.btn:focus-visible {
+  transform: translateY(-1px);
+}
+
+/* СИНЯ КНОПКА */
+.btn.main,
+.btn.light {
+  background-color: #4593FF;
+  color: #FFFFFF;
+}
+.btn.main:hover,
+.btn.light:hover {
+  background-color: #377cd6;
+}
+
+/* БІЛА КНОПКА */
+.btn.alt {
+  background-color: #FFFFFF;
+  color: #4593FF;
+}
+.btn.alt:hover {
+  background-color: #f0f0f0;
+}
+
+.btn.alt {
+  background-color: #FFFFFF;
+  color: #4593FF;
+  transition: background-color 0.2s ease;
+}
+
+.btn.alt:hover,
+.btn.alt:focus-visible {
+  background-color: #f0f0f0; 
+}
+
+.btn.cta {
+  background-color: #FFFFFF;       
+  color: #4593FF;                  
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #4593FF;
+}
+
+.btn.cta:hover,
+.btn.cta:focus-visible {
+  background-color: #e3e3e3;       
+  color: #4593FF;             
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  transform: none;
+}
+
+
+.btn.login {
+  background-color: #4593FF;     
+  color: #FFFFFF;                 
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #4593FF;
+}
+
+.btn.login:hover,
+.btn.login:focus-visible {
+  background-color: #3e86ea;      
+  color: #FFFFFF;                  
+  transform: none;
+}
+
+
+/*---------------------------------*/
+.intro {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 24px;
+  align-items: center;
+  background: var(--White);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  padding: 60px 40px;
+  margin-top: 24px;
+}
+.intro-text h1 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+.intro-text p {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  margin-bottom: 20px;
+  max-width: 56ch;
+}
+.intro-image {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  max-width: 1000px; 
+  margin: 0 auto;
+}
+
+.intro-image img {
+  flex-basis: 50%;
+  max-width: none;
+  width: 100%;
+  height: auto;
+}
+
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 32px;
+  align-items: stretch;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--LightBlue);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 40px 32px;
+  min-height: 340px;
+  max-height: 360px;
+  text-align: left; 
+}
+
+.card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--Grey);
+  margin: 0 0 14px;
+  text-transform: uppercase;
+  text-align: left; 
+}
+
+.card p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.55;
+  color: var(--Grey);
+  margin: 0 0 24px;
+  max-width: 260px;
+  min-height: 80px; 
+  text-align: left; 
+}
+
+/* для графіка */
+.card.hours {
+  text-align: center;
+}
+
+.card.hours h3,
+.card.hours p {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* кнопка */
+.card .btn {
+  align-self: center;
+  margin-top: auto; 
+  font-size: 13px;
+  font-weight: 700;
+  padding: 10px 26px;
+  border-radius: 6px;
+  text-transform: uppercase;
+}
+
+.center-text h3,
+.center-text p,
+.center-text .timetable {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card h3 {
+  text-align: center;
+}
+
+/* текст */
+.card:not(.schedule) p {
+  text-align: left;
+  margin-left: 12px; 
+  margin-right: 0;
+  max-width: 100%;   
+  width: 100%;
+}
+
+
+.schedule .timetable {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto 20px;
+  padding: 0 12px; 
+}
+
+.schedule .timetable div {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px; 
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--Grey);
+  padding: 6px 0;
+}
+
+.schedule hr {
+  height: 1px;
+  background: rgba(59, 64, 83, 0.15);
+  border: none;
+  margin: 4px 0 6px;
+}
+
+.team {
+  margin-top: 70px; 
+}
+
+.team-scroll {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin; 
+  scrollbar-color: rgba(0, 0, 0, 0.1) transparent; 
+}
+
+.team-scroll::-webkit-scrollbar {
+  height: 6px; 
+}
+
+.team-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.team-scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.15); 
+  border-radius: 999px;
+}
+
+.team-scroll {
+  scrollbar-width: none; /* для Firefox */
+}
+.team-scroll::-webkit-scrollbar {
+  display: none; /* для Chrome, Safari */
+}
+
+.profile {
+  position: relative;
+  width: 427px;
+  scroll-snap-align: start;
+}
+.profile-bg {
+  height: 190px;
+  background: var(--LightBlue);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.profile-body {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  align-items: center;
+  gap: 20px;
+  padding: 0 20px;
+}
+.med-avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--White);
+  box-shadow: var(--shadow);
+}
+.med-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* тексти*/
+.profile-info h4 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--Grey);
+}
+.tag {
+  display: inline-block;
+  padding: 10px;
+  border-radius: 5px;
+  background: var(--Grey);
+  color: var(--White);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.tag {
+  display: inline-block;
+  padding: 10px;
+  border-radius: 5px;
+  background: var(--Grey);
+  color: var(--White);
+  font-size: 14px;
+  font-weight: 500;
+  transition: transform 0.2s ease; 
+}
+
+.tag:hover {
+  transform: translateY(-1px); 
+}
+
+
+/* ФУТЕР */
+.footer {
+  background-color: var(--LightBlue);
+  padding: 40px 32px;
+}
+
+.footer-wrap {
+  max-width: var(--frame-width);
+  margin: 0 auto;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+/* логотип */
+.footer-logo {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+.footer-logo .brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+.footer-logo .symbol i {
+  background-color: var(--Blue);
+}
+.footer-logo .brand-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--Blue);
+}
+.footer-logo .brand-name span {
+  font-weight: 400;
+  color: var(--Blue);
+}
+
+/* до футера */
+.footer-content {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr 0.8fr;
+  gap: 10px;
+  flex-grow: 1;
+}
+
+/* Заголовки */
+.footer-block h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--Grey);
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.footer-block.services {
+  margin-left: 95px; 
+}
+
+.footer-block.services a {
+  font-size: 14px;
+  color: var(--Grey);
+  margin-bottom: 8px;
+  display: block;
+  text-decoration: none;
+}
+.footer-block.services a:hover {
+  text-decoration: underline;
+}
+
+
+.footer-block.small-block a {
+  display: block;
+  font-size: 14px;
+  color: var(--Grey);
+  margin-bottom: 8px;
+  text-decoration: none;
+}
+.footer-block.small-block a:hover {
+  text-decoration: underline;
+}
+
+/* Кнопка CONTACT */
+.contact-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--Blue);
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Іконка телефону */
+.contact-button img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  filter: brightness(100%) invert(0); /* біла іконка */
+  transition: filter 0.2s ease;
+}
+
+/* Номер телефону */
+.contact-number {
+  font-size: 15px;
+  font-weight: 700;
+  color: #FFFFFF;
+  transition: color 0.2s ease;
+}
+
+
+.contact-button:hover {
+  background-color: var(--White);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.contact-button:hover .contact-number {
+  color: var(--Blue);
+}
+
+.contact-button:hover img {
+  filter: brightness(1.2) saturate(500%) invert(27%) sepia(100%) hue-rotate(190deg);
+}
+
+@media (max-width: 768px) {
+  .user-actions {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  }
+
+  .btn.cta,
+  .btn.login {
+    font-size: 14px;
+    padding: 8px 16px;
+    width: 100%;
+  }
+
+  .intro-text p {
+    font-size: 13px;
+    line-height: 20px;
+    margin-bottom: 16px;
+  }
+
+  .intro-image {
+    justify-content: center;
+    margin-top: 24px;
+  }
+
+  .intro-image img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .intro {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+.signup-form {
+  max-width: 500px;
+  margin: 80px auto;
+  padding: 40px;
+  background-color: var(--LightBlue);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+
+.signup-form h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.signup-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.signup-form label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--Grey);
+}
+
+.signup-form input {
+  padding: 10px 14px;
+  font-size: 14px;
+  border: 1px solid rgba(59, 64, 83, 0.2);
+  border-radius: 6px;
+  background-color: var(--White);
+  color: var(--Grey);
+}
+
+.signup-form .btn {
+  margin-top: 20px;
+}
+
+.back-link {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.login-form {
+  max-width: 480px;
+  margin: 80px auto;
+  padding: 48px;
+  background-color: var(--White);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.login-form h2 {
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  color: var(--Grey);
+}
+
+.login-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login-form label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--Grey);
+}
+
+.login-form input {
+  padding: 12px 16px;
+  font-size: 14px;
+  border: 1px solid var(--LightGrey);
+  border-radius: var(--radius);
+  outline: none;
+}
+
+.login-form input:focus {
+  border-color: var(--Blue);
+}
+
+.login-form .btn.main {
+  background-color: var(--Blue);
+  color: var(--White);
+  padding: 12px 20px;
+  border: none;
+  border-radius: var(--radius);
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.login-form .btn.main:hover {
+  background-color: var(--DarkBlue);
+}
+
+.services-section {
+  max-width: 960px;
+  margin: 80px auto;
+  padding: 48px;
+  background-color: var(--LightBlue);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.services-section h2 {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  color: var(--Grey);
+}
+
+.section-description {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
+  color: var(--Grey);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+}
+
+.service-card {
+  background-color: var(--White);
+  padding: 32px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+}
+
+.service-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--Grey);
+}
+
+.service-card p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--Grey);
+}
+
+@media (max-width: 768px) {
+  .services-section {
+    padding: 32px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.btn.outline {
+  background-color: var(--White);
+  border: 1px solid var(--Blue);
+  color: var(--Blue);
+  padding: 10px 20px;
+  border-radius: var(--radius);
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  align-self: flex-start;
+}
+
+.btn.outline:hover {
+  background-color: var(--Blue);
+  color: var(--White);
+  border: 1px solid var(--White);
+}
+
