@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | HealthSpecialist</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            blue: '#4593FF',
+            darkBlue: '#377cd6',
+            lightBlue: '#F8FBFF',
+            grey: '#3B4053',
+            lightgrey: '#3f85e0',
+            darkBlue2:'#e6e6e6',
+          },
+          fontFamily: {
+            montserrat: ['Montserrat', 'sans-serif'],
+          },
+          boxShadow: {
+            soft: '0 10px 30px rgba(59, 64, 83, 0.08)',
+            standart: '0 2px 6px rgba(0,0,0,0.12)',
+          },
+          borderRadius: {
+            r1: '8.5px',
+            r2: '8px',
+          },
+          maxWidth: {
+            frame: '1360px',
+          },
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-white text-grey font-montserrat">
+
+  <!-- Topbar -->
+ <header class="bg-blue rounded-r1 shadow-soft mt-6 mx-6 px-6">
+  <div class="max-w-frame mx-auto h-[90px] flex items-center justify-between gap-8">
+    <!-- Логотип -->
+    <a href="#start" class="flex items-center gap-[14px] shrink-0">
+      <div class="relative w-[34px] h-[34px]">
+        <i class="absolute w-[12px] h-[12px] rounded-full bg-lightBlue shadow-standart top-0 left-1/2 -translate-x-1/2"></i>
+        <i class="absolute w-[12px] h-[12px] rounded-full bg-lightBlue shadow-standart top-1/2 left-0 -translate-y-1/2"></i>
+        <i class="absolute w-[12px] h-[12px] rounded-full bg-lightBlue shadow-standart top-1/2 right-0 -translate-y-1/2"></i>
+        <i class="absolute w-[12px] h-[12px] rounded-full bg-lightBlue shadow-standart bottom-0 left-1/2 -translate-x-1/2"></i>
+      </div>
+      <div class="text-[19px] font-bold text-lightBlue">
+        Health<span class="font-normal opacity-95">Specialist</span>
+      </div>
+    </a>
+
+    <!-- Навігація -->
+    <nav class="hidden lg:flex grow justify-center gap-[32px] text-white text-[13px] font-medium">
+      <a href="index.html" class="px-3 py-2 block">HOME</a>
+      <a href="#about" class="px-3 py-2 block">ABOUT</a>
+     <a href="services.html" class="px-3 py-2 block">SERVICES</a>
+      <div class="relative group">
+        <a href="#team" class="px-3 py-2 block text-white">DOCTORS</a>
+        <ul class="absolute hidden group-hover:flex flex-col gap-[8px] z-50 top-full left-1/2 -translate-x-1/2 w-[167px]">
+          <li><a href="#doc1" class="block w-full h-[40px] leading-[40px] text-center text-[12px] font-semibold rounded-r2 bg-blue text-white border border-blue hover:bg-white hover:text-blue transition">Phillis K Vance MD</a></li>
+          <li><a href="#doc2" class="block w-full h-[40px] leading-[40px] text-center text-[12px] font-semibold rounded-r2 bg-blue text-white border border-blue hover:bg-white hover:text-blue transition">Stanley K Hudson MD</a></li>
+          <li><a href="#doc3" class="block w-full h-[40px] leading-[40px] text-center text-[12px] font-semibold rounded-r2 bg-blue text-white border border-blue hover:bg-white hover:text-blue transition">Kevin D Malone MD</a></li>
+          <li><a href="#doc4" class="block w-full h-[40px] leading-[40px] text-center text-[11px] font-semibold rounded-r2 bg-blue text-white border border-blue hover:bg-white hover:text-blue transition">Angela S Martin MD</a></li>
+        </ul>
+      </div>
+      <a href="#contact" class="px-3 py-2 block">CONTACT</a>
+    </nav>
+
+    <!-- Кнопки -->
+    <div class="hidden lg:flex gap-3 shrink-0">
+      <button class="px-4 py-2 text-[15px] font-bold rounded-r2 bg-blue text-white border border-blue shadow-standart hover:bg-lightgrey transition">LOG IN</button>
+      <a href="signup.html" class="px-4 py-2 text-[15px] font-bold rounded-r2 bg-white text-blue border border-blue shadow-standart hover:bg-darkBlue2 transition">
+  SIGN UP
+</a>
+    <button class="lg:hidden text-white text-[24px]">
+      ☰
+    </button>
+  </div>
+</header>
+
+<!-- Services Section -->
+<section class="max-w-[960px] mx-auto mt-20 bg-lightBlue p-12 sm:p-10 rounded-lg shadow-soft flex flex-col gap-14">
+  <h2 class="text-[32px] font-bold text-grey text-center">Our Medical Services</h2>
+  <p class="text-[16px] font-normal leading-[1.6] text-center max-w-[720px] mx-auto text-grey">
+    We provide personalized, high-quality care across multiple specialties. Our goal is to support your health journey with expertise, compassion, and modern solutions.
+  </p>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-10">
+    <div class="bg-white p-12 rounded-r1 shadow-soft flex flex-col gap-10 hover:-translate-y-1 transition">
+      <h3 class="text-[20px] font-semibold text-grey">Family Medicine</h3>
+      <p class="text-[15px] font-normal leading-[1.6] text-grey">
+        Holistic care for individuals and families, focusing on prevention, wellness, and long-term health relationships.
+      </p>
+      <button class="px-5 py-2 text-[13px] font-medium rounded-r1 border border-blue text-blue bg-white hover:bg-blue hover:text-white transition self-start">
+        More
+      </button>
+    </div>
+
+
+    <div class="bg-white p-12 rounded-r1 shadow-soft flex flex-col gap-10 hover:-translate-y-1 transition">
+      <h3 class="text-[20px] font-semibold text-grey">Internal Medicine</h3>
+      <p class="text-[15px] font-normal leading-[1.5] text-grey">
+        Expert diagnosis and treatment of adult conditions, including chronic illnesses and complex medical cases.
+      </p>
+      <button class="px-5 py-2 text-[14px] font-medium rounded-r1 border border-blue text-blue bg-white hover:bg-blue hover:text-white transition self-start">
+        More
+      </button>
+    </div>
+
+    <div class="bg-white p-12 rounded-r1 shadow-soft flex flex-col gap-10 hover:-translate-y-1 transition">
+      <h3 class="text-[20px] font-semibold text-grey">Cardiology</h3>
+      <p class="text-[15px] font-normal leading-[1.5] text-grey">
+        Comprehensive heart care including screening, treatment, and rehabilitation for cardiovascular diseases.
+      </p>
+      <button class="px-5 py-2 text-[14px] font-medium rounded-r1 border border-blue text-blue bg-white hover:bg-blue hover:text-white transition self-start">
+        More
+      </button>
+    </div>
+
+    <div class="bg-white p-12 rounded-r1 shadow-soft flex flex-col gap-10 hover:-translate-y-1 transition">
+      <h3 class="text-[20px] font-semibold text-grey">Physical Therapy</h3>
+      <p class="text-[15
+      px] font-normal leading-[1.5] text-grey">
+        Recovery-focused therapy to restore mobility, reduce pain, and improve physical function after injury or surgery.
+      </p>
+      <button class="px-5 py-2 text-[14px] font-medium rounded-r1 border border-blue text-blue bg-white hover:bg-blue hover:text-white transition self-start">
+        More
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Футер -->
+<footer class="bg-lightBlue px-6 py-10 mt-20">
+  <div class="max-w-frame mx-auto flex flex-col lg:flex-row gap-10 lg:gap-[95px] items-start">
+    <!-- Логотип -->
+    <div class="flex items-center justify-center pt-[50px] pl-[20px] shrink-0">
+      <a href="index.html#start" class="flex items-center gap-[12px] text-blue text-[20px] font-bold no-underline">
+        <div class="relative w-[34px] h-[34px]">
+          <i class="absolute w-[12px] h-[12px] rounded-full bg-blue shadow-sm top-0 left-1/2 -translate-x-1/2"></i>
+          <i class="absolute w-[12px] h-[12px] rounded-full bg-blue shadow-sm top-1/2 left-0 -translate-y-1/2"></i>
+          <i class="absolute w-[12px] h-[12px] rounded-full bg-blue shadow-sm top-1/2 right-0 -translate-y-1/2"></i>
+          <i class="absolute w-[12px] h-[12px] rounded-full bg-blue shadow-sm bottom-0 left-1/2 -translate-x-1/2"></i>
+        </div>
+        <span>Health<span class="font-normal text-blue">Specialist</span></span>
+      </a>
+    </div>
+
+    <!-- Контент -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1fr_0.8fr_0.8fr] gap-[10px] grow w-full space-y-6 lg:space-y-0">
+      <div>
+        <h4 class="text-[16px] font-bold text-grey uppercase mb-[16px]">SERVICES</h4>
+        <a href="index.html#offers1" class="block text-sm text-grey mb-2 hover:underline">Family Medicine</a>
+        <a href="index.html#offers2" class="block text-sm text-grey mb-2 hover:underline">Internal Medicine</a>
+                <a href="index.html#offers3" class="block text-sm text-grey mb-2 hover:underline">Cardiology</a>
+        <a href="index.html#offers4" class="block text-sm text-grey mb-2 hover:underline">Physical Therapy</a>
+      </div>
+      <div>
+        <h4 class="text-[16px] font-bold text-grey uppercase mb-[16px]">DOCTORS</h4>
+        <a href="index.html#doc1" class="block text-sm text-grey mb-2 hover:underline">Phyllis K. Vance MD</a>
+        <a href="index.html#doc2" class="block text-sm text-grey mb-2 hover:underline">Stanley K. Hudson MD</a>
+        <a href="index.html#doc3" class="block text-sm text-grey mb-2 hover:underline">Kevin D. Malone MD</a>
+        <a href="index.html#doc4" class="block text-sm text-grey mb-2 hover:underline">Angela S. Martin MD</a>
+      </div>
+      <div>
+        <h4 class="text-[16px] font-bold text-grey uppercase mb-[16px]">CONTACT</h4>
+        <a href="tel:(404)123-4567"
+           class="inline-flex items-center gap-[10px] bg-blue px-[28px] py-[14px] rounded-r2 shadow-standart no-underline transition-all duration-200 hover:bg-white hover:-translate-y-[2px] hover:shadow-standart group">
+          <svg xmlns="http://www.w3.org/2000/svg"
+               viewBox="0 0 24 24"
+               fill="white"
+               class="w-[22px] h-[22px] transition duration-200 group-hover:fill-blue">
+            <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21c1.21.49 2.53.76 3.88.76a1 1 0 011 1v3.5a1 1 0 01-1 1A17 17 0 013 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.35.26 2.67.76 3.88a1 1 0 01-.21 1.11l-2.2 2.2z"/>
+          </svg>
+          <span class="text-[15px] font-bold text-white transition duration-200 group-hover:text-blue">
+            (404)123-4567
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
