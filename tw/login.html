@@ -86,42 +86,55 @@
   </form>
 </section>
 
-<!-- Футер -->
-<footer class="bg-lightBlue px-6 py-10 mt-20">
+<!-- Footer -->
+<footer id="footer" class="bg-lightBlue px-4 sm:px-6 py-10 font-montserrat mt-16">
   <div class="max-w-frame mx-auto flex flex-col lg:flex-row gap-10 lg:gap-[95px] items-start">
+
     <!-- Логотип -->
     <div class="flex items-center justify-center pt-[50px] pl-[20px] shrink-0">
-      <a href="index.html#start" class="flex items-center gap-[12px] text-blue text-[20px] font-bold no-underline">
+      <a href="#start" class="flex items-center gap-[12px] text-blue text-[20px] font-bold no-underline">
         <div class="relative w-[34px] h-[34px]">
-          <i class="absolute w-[12px] h-[12px] rounded-full bg-blue shadow-sm top-0 left-1/2 -translate-x-1/2"></i>
-          <i class="absolute w-[12px] h-[12px] rounded-full bg-blue shadow-sm top-1/2 left-0 -translate-y-1/2"></i>
-          <i class="absolute w-[12px] h-[12px] rounded-full bg-blue shadow-sm top-1/2 right-0 -translate-y-1/2"></i>
-          <i class="absolute w-[12px] h-[12px] rounded-full bg-blue shadow-sm bottom-0 left-1/2 -translate-x-1/2"></i>
+          <i class="absolute w-[12px] h-[12px] rounded-full bg-blue shadow-standart top-0 left-1/2 -translate-x-1/2"></i>
+          <i class="absolute w-[12px] h-[12px] rounded-full bg-blue shadow-standart top-1/2 left-0 -translate-y-1/2"></i>
+          <i class="absolute w-[12px] h-[12px] rounded-full bg-blue shadow-standart top-1/2 right-0 -translate-y-1/2"></i>
+          <i class="absolute w-[12px] h-[12px] rounded-full bg-blue shadow-standart bottom-0 left-1/2 -translate-x-1/2"></i>
         </div>
-        <span>Health<span class="font-normal text-blue">Specialist</span></span>
+        <div class="text-blue font-bold text-[20px]">
+          Health<span class="font-normal text-blue">Specialist</span>
+        </div>
       </a>
     </div>
 
-    <!-- Контент -->
+    <!-- Контент футера -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1fr_0.8fr_0.8fr] gap-[10px] grow w-full space-y-6 lg:space-y-0">
-      <div>
+
+      <!-- SERVICES -->
+      <div class="footer-block services lg:ml-[95px]">
         <h4 class="text-[16px] font-bold text-grey uppercase mb-[16px]">SERVICES</h4>
-        <a href="index.html#offers1" class="block text-sm text-grey mb-2 hover:underline">Family Medicine</a>
-        <a href="index.html#offers2" class="block text-sm text-grey mb-2 hover:underline">Internal Medicine</a>
-        <a href="index.html#offers3" class="block text-sm text-grey mb-2 hover:underline">Cardiology</a>
-        <a href="index.html#offers4" class="block text-sm text-grey mb-2 hover:underline">Physical Therapy</a>
+        <a href="#offers1" class="block text-[14px] text-grey mb-[8px] hover:underline">Family Medicine</a>
+        <a href="#offers2" class="block text-[14px] text-grey mb-[8px] hover:underline">Internal Medicine</a>
+        <a href="#offers3" class="block text-[14px] text-grey mb-[8px] hover:underline">Cardiology</a>
+        <a href="#offers4" class="block text-[14px] text-grey mb-[8px] hover:underline">Physical Therapy</a>
       </div>
-      <div>
+
+      <!-- DOCTORS -->
+      <div class="footer-block small-block">
         <h4 class="text-[16px] font-bold text-grey uppercase mb-[16px]">DOCTORS</h4>
-        <a href="index.html#doc1" class="block text-sm text-grey mb-2 hover:underline">Phyllis K. Vance MD</a>
-        <a href="index.html#doc2" class="block text-sm text-grey mb-2 hover:underline">Stanley K. Hudson MD</a>
-        <a href="index.html#doc3" class="block text-sm text-grey mb-2 hover:underline">Kevin D. Malone MD</a>
-        <a href="index.html#doc4" class="block text-sm text-grey mb-2 hover:underline">Angela S. Martin MD</a>
+        <a href="#doc1" class="block text-[14px] text-grey mb-[8px] hover:underline">Phyllis K. Vance MD</a>
+        <a href="#doc2" class="block text-[14px] text-grey mb-[8px] hover:underline">Stanley K. Hudson MD</a>
+        <a href="#doc3" class="block text-[14px] text-grey mb-[8px] hover:underline">Kevin D. Malone MD</a>
+        <a href="#doc4" class="block text-[14px] text-grey mb-[8px] hover:underline">Angela S. Martin MD</a>
       </div>
+
+      <!-- CONTACT -->
       <div>
         <h4 class="text-[16px] font-bold text-grey uppercase mb-[16px]">CONTACT</h4>
-        <a href="tel:(404)123-4567" class="inline-flex items-center gap-[10px] bg-blue px-[28px] py-[14px] rounded-r2 shadow-standart no-underline transition-all duration-200 hover:bg-white hover:-translate-y-[2px] hover:shadow-standart group">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="w-[22px] h-[22px] transition duration-200 group-hover:fill-blue">
+        <a href="tel:(404)123-4567"
+           class="inline-flex items-center gap-[10px] bg-blue px-[28px] py-[14px] rounded-r2 shadow-standart no-underline transition-all duration-200 hover:bg-white hover:-translate-y-[2px] hover:shadow-standart group">
+          <svg xmlns="http://www.w3.org/2000/svg"
+               viewBox="0 0 24 24"
+               fill="white"
+               class="w-[22px] h-[22px] transition duration-200 group-hover:fill-blue">
             <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21c1.21.49 2.53.76 3.88.76a1 1 0 011 1v3.5a1 1 0 01-1 1A17 17 0 013 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.35.26 2.67.76 3.88a1 1 0 01-.21 1.11l-2.2 2.2z"/>
           </svg>
           <span class="text-[15px] font-bold text-white transition duration-200 group-hover:text-blue">
@@ -129,9 +142,7 @@
           </span>
         </a>
       </div>
-      </div>
-    </div>
-  </footer>
 
-</body>
-</html>
+    </div>
+  </div>
+</footer>
